@@ -1,8 +1,10 @@
 <?php
-var_dump($_GET);
-
 $uncensored_text = $_GET['uncensored_text'];
 $badword = $_GET['badword'];
+$uncensored_text_lenght = strlen($uncensored_text);
+
+$censored_text = str_replace($badword, '***', $uncensored_text);
+$censored_text_lenght = strlen($censored_text);
 ?>
 
 <!DOCTYPE html>
@@ -20,13 +22,13 @@ $badword = $_GET['badword'];
                 <h2>Il testo originale:</h2>
                 <p><?php echo $uncensored_text ?></p>
                 <h3>Lunghezza testo originale:</h3>
-                <p><?php echo $badword ?></p>
+                <p><?php echo $uncensored_text_lenght ?></p>
             </li>
             <li>
                 <h2>Il testo censurato:</h2>
-                <p></p>
+                <p><?php echo $censored_text ?></p>
                 <h3>Lunghezza testo censurato:</h3>
-                <p></p>
+                <p><?php echo $censored_text_lenght ?></p>
             </li>
         </ul>
     </main>
