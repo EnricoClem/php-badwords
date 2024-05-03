@@ -10,14 +10,14 @@
     <main>
         <h1>Censura una parola dai tuoi testi!</h1>
 
-        <form action="">
+        <form action="./server.php">
             <p>
                 <label for="uncensored_text">Il tuo testo da censurare:</label>
-                <input type="text" name="uncensored_text" placeholder="Inserisci qui il testo.">
+                <input type="text" name="uncensored_text" id="uncensored_text" placeholder="Inserisci qui il testo.">
             </p>
             <p>
                 <label for="badword">La parola da rimuovere:</label>
-                <input type="text" name="badword" placeholder="Inserisci qui la parola.">
+                <input type="text" name="badword" id="badword" placeholder="Inserisci qui la parola.">
             </p>
             <button>CENSURA</button>
         </form>

@@ -1,3 +1,10 @@
+<?php
+var_dump($_GET);
+
+$uncensored_text = $_GET['uncensored_text'];
+$badword = $_GET['badword'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +18,9 @@
         <ul>
             <li>
                 <h2>Il testo originale:</h2>
-                <p></p>
+                <p><?php echo $uncensored_text ?></p>
                 <h3>Lunghezza testo originale:</h3>
-                <p></p>
+                <p><?php echo $badword ?></p>
             </li>
             <li>
                 <h2>Il testo censurato:</h2>
